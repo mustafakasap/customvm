@@ -13,7 +13,7 @@ scripts_path=/mnt/d/git/dsvm/azure/
 
 # Resource names (i.e. VM, storage) constructed from resource_name and suffix parameters
 # i.e. VM Name = resource_name+suffix
-suffix="36"
+suffix="38"
 
 # Remote command call
 function rcc {
