@@ -1,1 +1,4 @@
 azure/*.log
+azure/azure_settings.sh
+commons/settings.sh
+.vscode/settings.json
