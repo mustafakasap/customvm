@@ -1,5 +1,5 @@
 echo "------------------------------------------------------------------------------------------------------"
-echo " bazel.sh"
+echo " BEGIN: bazel.sh"
 echo "------------------------------------------------------------------------------------------------------"
 
 # Source: https://docs.bazel.build/versions/master/install-ubuntu.html
@@ -19,4 +19,4 @@ sudo apt-get -y install bazel
 cd ${HOME}
 echo "export PATH=$HOME/bin:${PATH}" | sudo tee --append /etc/profile.d/bazel.sh
 
-echo "----------------------------------------------END bazel.sh--------------------------------------------"
+echo " END: bazel.sh ---------------------------------------------------------------------------------------"

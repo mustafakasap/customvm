@@ -1,11 +1,11 @@
 #!/bin/sh
 
-echo "------------------------------------------------------------------------------------------------------"
-echo " Setting source URLs"
-echo "------------------------------------------------------------------------------------------------------"
+# Download any version for Ubuntu 18.0
 
+echo " --- Setting source URLs ---------------"
 
 CLOUD_STORAGE_URL=https://xstr.blob.core.windows.net/appstore/
+CLOUD_STORAGE_URL=UPDATE THIS URL WITH THE ONE YOU STORE LOCAL COPIES OF BELOW DRIVERS ETC.
 
 : '
 Desc:               NVidia Graphics card driver (VM should have a GPU)
@@ -16,16 +16,16 @@ Desc:               NVidia Graphics card driver (VM should have a GPU)
 Source URL:         http://www.nvidia.com/Download/index.aspx 
 Version: 			410.79
 Release Date: 		2018.12.3
-Operating System: 	Linux 64-bit Ubuntu 16.04
+Operating System: 	Linux 64-bit Ubuntu 18.04 
 CUDA Toolkit: 		10.0 (bundled with the driver)
 Language: 			English (US)
-File Size: 			128.87 MB
+File Size: 			92.57 MB 
 
 Required by:        Tensorflow (GPU version) https://www.tensorflow.org/install/gpu
 Why this version:   We download latest driver with latest CTK bundled (which is v10) but we will install just the driver 
                     not the bundled CTK. Specific/required CTK will be installed seperately.
 '
-NVIDIA_DRIVER=nvidia-diag-driver-local-repo-ubuntu1604-410.79_1.0-1_amd64.deb
+NVIDIA_DRIVER=nvidia-diag-driver-local-repo-ubuntu1804-410.79_1.0-1_amd64.deb
 NVIDIA_DRIVER_URL=${CLOUD_STORAGE_URL}nvidia/${NVIDIA_DRIVER}
 
 
@@ -43,7 +43,7 @@ File Size: 			1.6 GB
 Required by:        Tensorflow (GPU version) https://www.tensorflow.org/install/gpu
 Why this version:   Latest
 '
-NVIDIA_CUDA_TK=cuda-repo-ubuntu1604-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
+NVIDIA_CUDA_TK=cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
 NVIDIA_CUDA_TK_URL=${CLOUD_STORAGE_URL}nvidia/${NVIDIA_CUDA_TK}
 
 
@@ -66,12 +66,12 @@ NVIDIA_CUDNN_DOC_URL=${CLOUD_STORAGE_URL}nvidia/${NVIDIA_CUDNN_DOC}
 : '
 Desc: 	            NVIDIA Collective Communications Library (NCCL)        
 Source URL:         https://developer.nvidia.com/nccl
-Version: 			2.3.7
+Version: 			2.4.2
 
 Required by:        Tensorflow (GPU version) https://www.tensorflow.org/install/gpu
 Why this version:   Latest
 '
-NVIDIA_NCCL=nccl-repo-ubuntu1604-2.3.7-ga-cuda10.0_1-1_amd64.deb
+NVIDIA_NCCL=nccl-repo-ubuntu1804-2.4.2-ga-cuda10.0_1-1_amd64.debs
 NVIDIA_NCCL_URL=${CLOUD_STORAGE_URL}nvidia/${NVIDIA_NCCL}
 
 
@@ -83,7 +83,7 @@ Version: 			5.0
 Required by:        Tensorflow (GPU version) https://www.tensorflow.org/install/gpu
 Why this version:   Latest
 '
-NVIDIA_TENSORRT=nv-tensorrt-repo-ubuntu1604-cuda10.0-trt5.0.2.6-ga-20181009_1-1_amd64.deb
+NVIDIA_TENSORRT=nv-tensorrt-repo-ubuntu1804-cuda10.0-trt5.0.2.6-ga-20181009_1-1_amd64.deb
 NVIDIA_TENSORRT_URL=${CLOUD_STORAGE_URL}nvidia/${NVIDIA_TENSORRT}
 
 : '
@@ -100,8 +100,8 @@ BAZEL_URL=${CLOUD_STORAGE_URL}${BAZEL}
 
 : '
 Desc: 	            Storage Explorer         
-Source URL:         https://docs.bazel.build/versions/master/install-ubuntu.html
-Version: 			0.21.0
+Source URL:         https://azure.microsoft.com/en-us/features/storage-explorer/
+Version: 			Latest as of 2 Feb 2019
 
 Required by:        None
 Why this version:   Latest
@@ -124,4 +124,28 @@ OPENCV_URL=${CLOUD_STORAGE_URL}${OPENCV}
 OPENCVCONT=opencv_contrib-4.0.0.zip
 OPENCVCONT_URL=${CLOUD_STORAGE_URL}${OPENCVCONT}
 
-echo "----------------------------------------------END source URLs-----------------------------------------"
+
+: '
+Desc: 	            Tensorflow         
+Source URL:         
+Version: 			1.13.rc0
+
+Required by:        None
+Why this version:   Latest
+'
+TFV113RCP2=tensorflow-1.13.0rc0-cp27-cp27mu-linux_x86_64.whl
+TFV113RCP2_URL=${CLOUD_STORAGE_URL}${TFV113RCP2}
+
+TFV113RCP3=tensorflow-1.13.0rc0-cp36-cp36m-linux_x86_64.whl
+TFV113RCP3_URL=${CLOUD_STORAGE_URL}${TFV113RCP3}
+
+: '
+Desc: 	            Visual Studio Code         
+Source URL:         https://code.visualstudio.com/
+Version: 			Latest as of 2 Feb 2019
+
+Required by:        None
+Why this version:   Latest
+'
+VSCODE=code_1.30.2-1546901646_amd64.deb
+VSCODE_URL=${CLOUD_STORAGE_URL}${VSCODE}

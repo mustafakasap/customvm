@@ -1,5 +1,5 @@
 echo "------------------------------------------------------------------------------------------------------"
-echo " nvidia_cuda_tk.sh"
+echo " BEGIN: nvidia_cuda_tk.sh"
 echo "------------------------------------------------------------------------------------------------------"
 
 . ${disk_mnt_point}/tmp/source_urls.sh
@@ -20,4 +20,4 @@ cd ${HOME}
 echo "export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:${LD_LIBRARY_PATH}" | sudo tee --append /etc/profile.d/cudatk10.sh
 echo "export PATH=/usr/local/cuda-10.0/bin:${PATH}" | sudo tee --append /etc/profile.d/cudatk10.sh
 
-echo "----------------------------------------------END nvidia_cuda_tk.sh-----------------------------------"
+echo " END: nvidia_cuda_tk.sh ------------------------------------------------------------------------------"

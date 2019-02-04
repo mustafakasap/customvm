@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "------------------------------------------------------------------------------------------------------"
-echo " opencv_compile.sh"
+echo " BEGIN: opencv_compile.sh"
 echo "------------------------------------------------------------------------------------------------------"
 
 . ${disk_mnt_point}/tmp/source_urls.sh
@@ -103,10 +103,11 @@ make -j$(($(nproc)+1))
 sudo make install
 sudo ldconfig
 
-cd /usr/local/python/cv2/python-3.5
-sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+cd /usr/local/python/cv2/python-3*
+sudo mv cv2.cpython-*-x86_64-linux-gnu.so cv2.so
 
-cd /usr/lib/python3.5/dist-packages
-sudo ln -s /usr/local/python/cv2/python-3.5/cv2.so cv2.so
+#py3name="$(readlink /usr/bin/python3)"
+cd /usr/lib/python3/dist-packages
+sudo ln -s /usr/local/python/cv2/python-3*/cv2.so cv2.so
 
-echo "----------------------------------------------END opencv_compile.sh-----------------------------------"
+echo " END: opencv_compile.sh ------------------------------------------------------------------------------"

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "------------------------------------------------------------------------------------------------------"
-echo " Creating Azure VM"
+echo " BEGIN: create_azure_vm.sh"
 echo "------------------------------------------------------------------------------------------------------"
 : '
 Desc: 
@@ -91,7 +91,7 @@ Debian         credativ                8                   credativ:Debian:8:lat
 openSUSE-Leap  SUSE                    42.3                SUSE:openSUSE-Leap:42.3:latest                                  openSUSE-Leap        latest
 RHEL           RedHat                  7-RAW               RedHat:RHEL:7-RAW:latest                                        RHEL                 latest
 SLES           SUSE                    12-SP2              SUSE:SLES:12-SP2:latest                                         SLES                 latest
-UbuntuServer   Canonical               16.04-LTS           Canonical:UbuntuServer:16.04-LTS:latest                         UbuntuLTS            latest
+UbuntuServer   Canonical               18.04-LTS           Canonical:UbuntuServer:18.04-LTS:latest                         UbuntuLTS            latest
 WindowsServer  MicrosoftWindowsServer  2019-Datacenter     MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest     Win2019Datacenter    latest
 WindowsServer  MicrosoftWindowsServer  2016-Datacenter     MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest     Win2016Datacenter    latest
 WindowsServer  MicrosoftWindowsServer  2012-R2-Datacenter  MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest  Win2012R2Datacenter  latest
@@ -124,4 +124,4 @@ vm_public_ip=$(az vm list-ip-addresses -n $vm_name --query "[].{ip: virtualMachi
 echo "IP address of the VM: $vm_public_ip"
 echo "DNS name of the VM: $vm_dns_name"
 
-echo "----------------------------------------------END---------------------------------------------------"
+echo " END: create_azure_vm.sh -----------------------------------------------------------------------------"

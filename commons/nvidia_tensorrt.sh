@@ -1,5 +1,5 @@
 echo "------------------------------------------------------------------------------------------------------"
-echo " nvidia_tensorrt.sh"
+echo " BEGIN: nvidia_tensorrt.sh"
 echo "------------------------------------------------------------------------------------------------------"
 
 . ${disk_mnt_point}/tmp/source_urls.sh
@@ -19,4 +19,4 @@ sudo apt-get -y install python-libnvinfer-dev
 sudo apt-get -y install python3-libnvinfer-dev
 sudo apt-get -y install uff-converter-tf graphsurgeon-tf
 
-echo "----------------------------------------------END nvidia_tensorrt.sh----------------------------------"
+echo " END: nvidia_tensorrt.sh -----------------------------------------------------------------------------"

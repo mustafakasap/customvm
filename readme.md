@@ -12,7 +12,7 @@ vm_size="Standard_NC6s_v3"
 This VM type is single GPU but with the latest GPU model! so it will consume your cloud credits quickly! See [Azure pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/) to see how much credits it will consume from your cloud subscription to not to be surprised later!
 
 ## Point in time limitations
-- Just Ubuntu VM Support
+- Just Ubuntu 18.0 VM Support
 - Just Microsoft Azure Cloud deployment
 
 ## Collaboration Request
@@ -26,16 +26,15 @@ You may select any of the software bekiw or more in your custom VM deployment:
 4) OpenCV (compiled from source specific to installed VM instruction set)  
 5) Latest Tensorflow (compiled from source specific to installed VM instruction set)  
 6) PyTorch
-7) NVidia Digits  
+7) VLC Player
 8) Jupyter Notebook server  
-9) Internet Browser  
+9) Chrome Internet Browser  
 10) Sublime Text editor  
 11) Storage Explorers for managing cloud storage  
 12) GPICView Image viewer
 13) Visual Studio Code
-14) Caffee
-15) Azure Cloud Storage Explorer
-16) ...
+14) Azure Cloud Storage Explorer
+15) ...
 
 # How to run the project to create a custom VM
 ## Requirements

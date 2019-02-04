@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "------------------------------------------------------------------------------------------------------"
-echo " Create Extra Disk"
+echo " BEGIN: azure_create_disk.sh"
 echo "------------------------------------------------------------------------------------------------------"
 
 # --sku {Premium_LRS, Standard_LRS}]
@@ -25,4 +25,4 @@ az vm disk attach \
 echo "Partitioning and mounting the extra disk."
 ssh -i ~/.ssh/$vm_name"_id_rsa" $user_name@$vm_dns_name disk_dev_name=$disk_dev_name disk_mnt_point=$disk_mnt_point 'bash -s ' < $script_path"../commons/mount_disk.sh"
 
-echo "----------------------------------------------END---------------------------------------------------"
+echo " END: azure_create_disk.sh ---------------------------------------------------------------------------"

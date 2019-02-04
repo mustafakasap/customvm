@@ -58,7 +58,6 @@ fi
 scp -i ~/.ssh/$vm_name"_id_rsa" $scripts_path"../commons/source_urls.sh" $user_name@$vm_dns_name:${disk_mnt_point}/tmp/
 ssh -i ~/.ssh/$vm_name"_id_rsa" $user_name@$vm_dns_name "sudo chmod 777 ${disk_mnt_point}/tmp/source_urls.sh"
 
-
 # -----------------------------------------------------------------------------------------------------------
 # Install NVidia Drivers
 # -----------------------------------------------------------------------------------------------------------
@@ -115,5 +114,6 @@ rsc "../commons/opencv_compile.sh"
 # -----------------------------------------------------------------------------------------------------------
 scp -i ~/.ssh/$vm_name"_id_rsa" $scripts_path"../commons/tf_bazel_config.p2" $user_name@$vm_dns_name:${disk_mnt_point}/tmp/
 scp -i ~/.ssh/$vm_name"_id_rsa" $scripts_path"../commons/tf_bazel_config.p3" $user_name@$vm_dns_name:${disk_mnt_point}/tmp/
-
 rsc "../commons/tensorflow_compile.sh"
+
+#rsc "../commons/tensorflow_install.sh"

@@ -2,7 +2,7 @@
 
 # Define several global variables to be used for setting the DSVM properties
 echo "------------------------------------------------------------------------------------------------------"
-echo " Setting Azure specific script parameters"
+echo " BEGIN: Setting Azure specific script parameters"
 echo "------------------------------------------------------------------------------------------------------"
 
 # If you have more than one Azure subscription, under which subscription are these resources will be created?
@@ -17,6 +17,7 @@ azure_subscription_id='HERE WRITE DOWN YOUR OWN AZURE SUBSCRIPTION KEY'
 # i.e. VM Name = resource_name+suffix
 # resource_name="mydsvm"
 resource_name="GIVE ANY NAME TO YOUR VM"
+
 
 # List of possible resource locations. Used to set resource_location parameter
 # to get the updated list use the following commands:
@@ -121,4 +122,4 @@ ssh_port=22
 # Jupyter Notebook port
 jnb_port=8981
 
-echo "----------------------------------------------END---------------------------------------------------"
+echo " END: Setting Azure specific script parameters -------------------------------------------------------"
